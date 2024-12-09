@@ -1,0 +1,7 @@
+.vercel
+node_modules
+.env
+api
+New folder
+Dockerfile
+vercel.json
