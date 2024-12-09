@@ -110,11 +110,7 @@ app.get("/campaigns/:limit", async (req, res) => {
       try {
         const newDonation = req.body;
     
-        // Validate the required fields
-        if (!newDonation.userId || !newDonation.minimumDonationAmount) {
-          return res.status(400).json({ message: "Missing required fields: userId and amount" });
-        }
-    
+     
         const result = await donations.insertOne(newDonation);
         res.status(201).json({ 
           message: "Donation created successfully", 
